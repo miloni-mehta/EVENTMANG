@@ -1,0 +1,29 @@
+.events {
+    padding: 20px;
+  }
+  
+  .events h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .events ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .events li {
+    margin-bottom: 20px;
+  }
+  
+  .events h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .events p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+  }
+  

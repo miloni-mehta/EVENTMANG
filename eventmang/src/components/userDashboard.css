@@ -1,0 +1,23 @@
+.user-dashboard {
+    margin: 20px;
+}
+
+.user-profile {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.upcoming-events {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.upcoming-events ul {
+    list-style: none;
+    padding: 0;
+}
+
+.upcoming-events li {
+    margin-bottom: 10px;
+}
