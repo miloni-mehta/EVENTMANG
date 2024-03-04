@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Event.css';
+import { Link } from 'react-router-dom';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
-
+  
+  useEffect(() => {
   // Dummy event data
   const dummyEvents = [
     { id: 1, name: "Tech Conference 2024", date: "2024-03-15", location: "New York" },
@@ -12,25 +14,24 @@ const Events = () => {
     // Add more dummy events as needed
   ];
 
-  useEffect(() => {
     // Simulate fetching events from the backend (could be replaced with actual API call)
     setEvents(dummyEvents);
   }, []);
 
   return (
-    <div className="events">
-      <h2>Upcoming Events</h2>
-      <ul>
-        {events.map(event => (
-          <li key={event.id}>
-            <h3>{event.name}</h3>
-            <p>Date: {event.date}</p>
-            <p>Location: {event.location}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+    <div>
+    <h1>Events</h1>
+    <ul>
+      {events.map(event => (
+        <li key={event.id}>
+          <Link to={`/events/${event.id}`}>{event.name}</Link>
+        </li>
+      ))}
+    </ul>
+    <Link to="/events/new">Create New Event</Link>
+  </div>
+);
 }
+
 
 export default Events;
