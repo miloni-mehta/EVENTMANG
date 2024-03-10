@@ -1,0 +1,28 @@
+.user-list {
+    margin-bottom: 20px;
+  }
+  
+  .user-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .user-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .user-list li {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .user-list li div {
+    margin-bottom: 10px;
+  }
+  
+  .user-list li div:last-child {
+    margin-bottom: 0;
+  }

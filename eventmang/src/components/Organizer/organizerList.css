@@ -1,0 +1,28 @@
+.organizer-list {
+    margin-bottom: 20px;
+  }
+  
+  .organizer-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .organizer-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .organizer-list li {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .organizer-list li div {
+    margin-bottom: 10px;
+  }
+  
+  .organizer-list li div:last-child {
+    margin-bottom: 0;
+  }
