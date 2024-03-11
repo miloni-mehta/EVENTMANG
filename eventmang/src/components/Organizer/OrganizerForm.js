@@ -3,10 +3,12 @@
 import React, { useState } from 'react';
 import ApiService from '../services/ApiService';
 import './organizerForm.css';
-
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../Navbar';
 const OrganizerForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -15,13 +17,16 @@ const OrganizerForm = () => {
             const response = await ApiService.addOrganizer(organizer);
             console.log('Organizer added:', response.data);
             // Redirect or display success message
+            navigate("/organizers");
         } catch (error) {
             console.error('Error adding organizer:', error);
             // Display error message
         }
     };
-
+   
     return (
+        <>
+        <Navbar/>
         <form className="organizer-form" onSubmit={handleSubmit}>
             <label>Name:
                 <input
@@ -31,6 +36,7 @@ const OrganizerForm = () => {
                     required
                 />
             </label>
+            <br/><br/>
             <label>Email:
                 <input
                     type="email"
@@ -39,8 +45,10 @@ const OrganizerForm = () => {
                     required
                 />
             </label>
-            <button type="submit">Add Organizer</button>
+            <br/><br/>
+            <button type="submit" >Add Organizer</button>
         </form>
+        </>
     );
 };
 

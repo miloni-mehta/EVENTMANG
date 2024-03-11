@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import ApiService from '../services/ApiService';
 import './registerList.css';
-
+import Navbar from '../Navbar';
 const RegisterList = () => {
     const [registers, setRegisters] = useState([]);
 
@@ -21,17 +21,20 @@ const RegisterList = () => {
     }, []);
 
     return (
+        <>
+        <Navbar/>
         <div className="register-list">
             <h2>Registers List</h2>
             <ul>
                 {registers.map(register => (
                     <li key={register.id}>
-                        <div>User: {register.user.name}</div>
-                        <div>Event: {register.event.name}</div>
-                    </li>
+                    <div>User: {register.user ? register.user.name : 'Unknown User'}</div>
+                    <div>Event: {register.event ? register.event.name : 'Unknown Event'}</div>
+                </li>
                 ))}
             </ul>
         </div>
+        </>
     );
 };
 

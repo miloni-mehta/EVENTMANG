@@ -5,13 +5,13 @@ const BASE_URL = 'http://localhost:8080/api';
 const ApiService = {
     // Admin APIs
     getAllAdmins: async () => {
-        return await axios.get(`${BASE_URL}/admins`);
+        return await axios.get(`${BASE_URL}/admins/adminregister`);
     },
     addAdmin: async (admin) => {
         return await axios.post(`${BASE_URL}/admins`, admin);
     },
-    saveAdmin: async (admin) => {
-        return await axios.put(`${BASE_URL}/admins/${admin.id}`, admin);
+    updateAdmin: async (id,admin) => {
+        return await axios.put(`${BASE_URL}/admins/${id}`, admin);
     },
     deleteAdmin: async (id) => {
         return await axios.delete(`${BASE_URL}/admins/${id}`);
@@ -24,8 +24,8 @@ const ApiService = {
     addEvent: async (event) => {
         return await axios.post(`${BASE_URL}/events`, event);
     },
-    saveEvent: async (event) => {
-        return await axios.put(`${BASE_URL}/events/${event.id}`, event);
+    updateEvent: async (id,event) => {
+        return await axios.put(`${BASE_URL}/events/${id}`, event);
     },
     deleteEvent: async (id) => {
         return await axios.delete(`${BASE_URL}/events/${id}`);
@@ -38,8 +38,8 @@ const ApiService = {
     addOrganizer: async (organizer) => {
         return await axios.post(`${BASE_URL}/organizers`, organizer);
     },
-    saveOrganizer: async (organizer) => {
-        return await axios.put(`${BASE_URL}/organizers/${organizer.id}`, organizer);
+    updateOrganizer: async (id,organizer) => {
+        return await axios.put(`${BASE_URL}/organizers/${id}`, organizer);
     },
     deleteOrganizer: async (id) => {
         return await axios.delete(`${BASE_URL}/organizers/${id}`);
@@ -52,8 +52,8 @@ const ApiService = {
     addUser: async (user) => {
         return await axios.post(`${BASE_URL}/users`, user);
     },
-    saveUser: async (user) => {
-        return await axios.put(`${BASE_URL}/users/${user.id}`, user);
+    updateUser: async (id, user) => { // Define the updateUser function
+        return await axios.put(`${BASE_URL}/users/${id}`, user);
     },
     deleteUser: async (id) => {
         return await axios.delete(`${BASE_URL}/users/${id}`);

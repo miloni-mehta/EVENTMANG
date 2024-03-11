@@ -1,21 +1,17 @@
-// src/components/Home.js
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Header from './common/Header';
-import Footer from './common/footer';
+import React from 'react'
+import Navbar from './Navbar.js'
+import './Home.css'
+import image from "../components/assests/images.jpeg"; 
+const Home = () => {
+  return (
+    <>
+    <Navbar />
+    <div style={{ backgroundImage:`url(${image})`,backgroundRepeat:"no-repeat",backgroundSize:"cover" ,height:"680px", width:"1532px"
+    }}>
+      
+    </div>
+    </>
+  )
+}
 
-const Home = () => (
-  <div className="home">
-    <Header />
-    <nav>
-      <ul>
-      <li><Link to="/events">Events</Link></li>
-        <li><Link to="/register">Register for Event</Link></li>
-      </ul>
-    </nav>
-    <p>Explore upcoming events, manage your profile, and much more!</p>
-    <Footer />
-  </div>
-);
-
-export default Home;
+export default Home

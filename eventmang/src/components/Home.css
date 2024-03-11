@@ -1,26 +1,7 @@
-.home {
-  padding: 20px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-p {
-  margin-top: 20px;
+.contain{
+  background-image: url('D:\Visual Studio\EVENTMANG\eventmang\src\components\assests\images.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #FFFFFF;
 }

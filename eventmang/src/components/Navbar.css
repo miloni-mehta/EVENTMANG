@@ -1,0 +1,10 @@
+.left{
+  justify-content: right;
+}
+
+li:hover{
+  background-color: rgba(18, 229, 233, 0.50);
+}
+.navbar-brand{
+  font-weight: 500;  
+}
