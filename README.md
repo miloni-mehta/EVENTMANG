@@ -1,4 +1,5 @@
 Event Management System
+
 The Event Management System is a web application designed to manage events, users, organizers, and registrations of event by user. The system is built using React for the frontend, Spring Boot for the backend, and MySQL for the database.
 
 Table of Contents
